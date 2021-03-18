@@ -1,4 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300;400;700&display=swap');
+$text_color_light: #FFFFFF;
+$h2_font-size: 36px;
+$h2_letter_space: 20px;
+$backgroundList: 
+   'url(./img//Back_Case/безцветный.jpg)',
+   'url(./img//Back_Case/дом-из-дерева-белого-цвета.jpg)',
+   'url(./img//Back_Case/дом-из-темного-бруса.jpg)',
+   'url(./img//Back_Case/коричневый.jpg',
+   'url(./img//Back_Case/красный.jpg)',
+   'url(./img//Back_Case/серый.jpg)';
+
+@mixin light_h2 {
+   color: $text_color_light;
+   font-size: $h2_font-size;
+   letter-spacing: $h2_letter_space;
+}
+
 * {
    margin: 0;
    padding: 0;
 }
+body{
+   font-family: 'Roboto', sans-serif;
+   font-size: 14px;
+}
+ header{
+   padding: 2rem 5rem ;
+   background: rgba(3, 3, 3, 0.7);
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   color: $text_color_light;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   .logo{
+      text-transform: uppercase;
+      font-size: 36px;
+   }
+   ul{
+      width: 30%;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      li a{
+         text-decoration: none;
+         color: $text_color_light;
+         text-transform: uppercase;
+      }
+      li a:hover{
+         color: #57C855;
+         text-decoration: underline;
+      }
+   }
+ }
+ main{
+    width: 100%;
+    .first_screen{
+       height: 100vh;
+       background: linear-gradient(0deg, rgba(57, 87, 52, 0.32),rgba(57, 87, 52, 0.32)), 
+                   url(./img/дом-из-дерева-белого-цвета.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      h2, p{
+         color: rgba(255, 255, 255, 0.72);
+         margin-left: 20%;
+         width: 30%;
+      }
+      h2{
+         padding-top: 15%;
+         @include light_h2();
+      }
+      p{
+         padding-top: 30px;
+         line-height: 24px;
+         letter-spacing: 5px;
+      }
+    }
+    .form_section {
+       padding:1rem 0 3rem;
+       background: rgba(3, 3, 3, 0.7);
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+      h2 {
+         padding: 2rem 0;
+         @include light_h2();
+         font-weight: 400;
+      }
+      form{
+         width: 70%;
+         display: flex;
+         justify-content: space-around;
+         input{
+            width: 286px;
+            height: 46px;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            padding-left: 15px;
+         }
+      }
+      button{
+         margin-top: 2rem;
+         width: 286px;
+         height: 46px;
+         background: #395734;
+         border-radius: 50px;
+         border: none;
+         font-size: 24px;
+         color: $text_color_light;
+         letter-spacing: 5px;
+      }
+    }
+    .our_cases{
+       height: 100vh;
+       background: rgba(57, 87, 52, 0.32);
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       h2{
+          @include light_h2();
+          padding: 3rem 0;
+       }
+       .__case_galery{
+          min-width: 975px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: 350px;
+          grid-gap: 30px;
+          #case1{
+            background: url(./img/Back_Case/безцветный.jpg)
+          }
+          #case2{
+            background: url(./img/Back_Case/дом-из-дерева-белого-цвета.jpg)
+          }
+          #case3{
+            background: url(./img/Back_Case/дом-из-темного-бруса.jpg)
+          }
+          #case4{
+            background: url(./img/Back_Case/коричневый.jpg)
+          }
+          #case5{
+            background: url(./img/Back_Case/серый.jpg)
+          }
+          #case6{
+            background: url(./img/Back_Case/красный.jpg)
+          }
+          .__case{
+            border-radius: 25px;
+            background-size: cover !important;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            span{
+               padding-bottom: 20px;
+               color: $text_color_light;
+               letter-spacing: 2px;
+            }
+          }
+          
+          .__case:hover{
+             filter: blur(8px);
+             cursor: pointer;
+          }
+       }
+    }
+ }

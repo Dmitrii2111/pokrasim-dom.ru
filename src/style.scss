@@ -126,11 +126,12 @@ body{
           padding: 3rem 0;
        }
        .__case_galery{
-          min-width: 975px;
+          min-width: 1235px;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           grid-auto-rows: 350px;
-          grid-gap: 30px;
+          grid-column-gap: 160px;
+          grid-row-gap: 50px;
           #case1{
             background: url(./img/Back_Case/безцветный.jpg)
           }
@@ -163,11 +164,259 @@ body{
                letter-spacing: 2px;
             }
           }
-          
           .__case:hover{
              filter: blur(8px);
              cursor: pointer;
           }
        }
     }
+    .our_services{
+      height: 100vh;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 81.25%), #BFC9BD;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h2{
+         @include light_h2();
+         padding: 0 0 10rem;
+      }
+      .__services{
+         min-width: 1235px;
+         display: flex;
+         justify-content: space-between;
+         .order_btn{
+            margin-top: 40px;
+            width: 300px;
+            height: 45px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 25px;
+            background: #57C855;
+            a{
+               color:#FFFFFF;
+               font-size: 18px;
+               letter-spacing: 5px;
+               text-decoration: none;
+            }
+            border: none;
+         }
+         .order_btn:hover, .__services_card:hover{
+            cursor: pointer;
+         }
+         
+         .grinding{
+            background: url(../src/img/шлиф.png), white;
+         }
+         .painting{
+            background: url(../src/img/7b3d652b67aa0aec24451e98778ec63e.png), white;
+         }
+         .warm_seam{
+            background: url(../src/img/шов.png), white;
+            
+         }
+         .__services_card{
+            width: 300px;
+            height: 445px;
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: contain;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: center;
+            align-items: center;
+            .__text_block{
+               margin-bottom: 30px;
+               padding-bottom: 15px;
+               width: 80%;
+               border:1px solid black;
+               border-radius: 15px;
+               h3{
+                  padding: 18px 0 23px;
+                  letter-spacing: 3px;
+               }
+            }
+         }
+      }
+    }
+    .commercial_block{
+      height: 100vh;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 23.44%, #FFFFFF 98.96%), linear-gradient(180deg, #FFFFFF 11.46%, rgba(255, 255, 255, 0) 63.54%), url(./img/Back_Case/красный.jpg);
+      // opacity: 0.5;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h2{
+         width: 1235px;
+         color: black;
+         font-size: $h2_font-size;
+         letter-spacing: $h2_letter_space;
+         padding-bottom: 20px;
+      }
+      .topics_container{
+         width: 1235px;
+         display: grid;
+         grid-column-gap: 75px;
+         min-width: 1235px;
+         grid-template-areas: "newHouse sell ."
+                              ".      .    renew"
+                              "wood    old   ." ;
+      }
+      .topic{
+         // width: 410px;
+         height: 145px;
+         border-radius: 10px;
+         border: 2px solid #000000;
+         box-sizing: border-box;
+         h3{
+            padding: 23px 0 23px 20px ;
+            font-size: 18px;
+         }
+         p{
+            padding-left: 20px;
+         }
+      }
+      .topic::before{
+         content:' ';
+         border: 2px solid;
+         width: 26px;
+         height: 26px;
+         border-radius:50%;
+         position: absolute;
+         margin-left:-15px;
+         margin-top: 45px;
+         background: #000 url(./img/done.png);
+         background-repeat: no-repeat;
+         background-position: center;
+      }
+      .__renew{
+         grid-area: renew;
+         h3{
+            width: 70%;
+            margin: 0 auto;
+            padding-top: 15%;
+         }
+      }
+      .__old{
+         grid-area: old;
+      }
+      .__wood{
+         grid-area: wood;
+      }
+      .__sell{
+         grid-area: sell;
+      }
+      .__new{
+         grid-area: newHouse;
+      }
+
+      
+    }
+    .faq{
+       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(180deg, #FFFFFF 15.62%, #BFC9BD 100%);
+      h2{
+         padding-top: 50px;
+         color: black;
+         font-size: $h2_font-size;
+         letter-spacing: $h2_letter_space;
+         padding-bottom: 30px;
+      }
+      ul{
+         // margin-top: 15%;
+         list-style-type: none;
+         width: 50%;
+         padding-bottom: 100px;
+         li{
+            padding: 10px 0 10px;
+            .text_block{
+               background: url(./img/chevron-down-outline.svg) white;
+               background-repeat: no-repeat;
+               background-position: center right 5%;
+               background-size: 5%;
+               padding: 20px ;
+               border-radius: 25px;
+               border: 0.5px solid rgba(0, 0, 0, 0.068);
+               box-sizing: border-box;
+               box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+               
+            }
+            p{
+               margin-top: 10px;
+               padding: 20px;
+               border-radius: 25px;
+               border-bottom: 0.5px solid rgba(0, 0, 0, 0.068);
+               background: #71a3614d;
+            } 
+         }
+      }
+     
+    }
+    .about{
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       background: linear-gradient(180deg, #BFC9BD 0%, rgba(255, 255, 255, 0) 100%), url(./img/pexels-eva-elijas-5940999.jpg);
+       background-size: cover;
+       h2{
+          @include light_h2();
+          padding: 10% 0 15%;
+       }
+       p{
+          width: 60%;
+          color: #FFFFFF;
+          line-height: 24px;
+          letter-spacing: 3px;
+      }
+    }
+ }
+ footer{
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: space-around;
+    .contacts{
+      padding: 40px;
+      h3{
+         font-size: 18px;
+         color: #FFFFFF;
+         letter-spacing: 5px;
+         padding-bottom: 20px;
+      }
+      span{
+         display: block;
+         color: #FFFFFF;
+         letter-spacing: 2px;
+         line-height: 50px;
+      }
+      .social{
+         padding: 40px 0;
+         a{
+            padding-right: 15px;
+         }
+      }
+    }
+    .location{
+      padding-top: 40px;
+   }
+ }
+ .autor{
+    display: block;
+   background: rgba(0, 0, 0, 0.75);
+   width: 100%;
+   text-align: center;
+   color: #ffffff41;
+   padding-bottom: 5px;
+   letter-spacing: 2px;
+   font-size: 12px;
+   a{
+      color: #ffffff41;;
+   }
  }

@@ -1,10 +1,17 @@
-let back = [
-   'url(./img//Back_Case/безцветный.jpg)',
-   'url(./img//Back_Case/дом-из-дерева-белого-цвета.jpg)',
-   'url(./img//Back_Case/дом-из-темного-бруса.jpg)',
-   'url(./img//Back_Case/коричневый.jpg',
-   'url(./img//Back_Case/красный.jpg)',
-   'url(./img//Back_Case/серый.jpg)'
-]
 
+// FAQ 
+list.onclick = function(event){
+   if ((event.target.tagName != 'DIV')) {
+     return
+   }
+   let hidenElement = event.target.nextElementSibling;
+   console.log(event.target)
+   hidenElement.hidden = !hidenElement.hidden
+   if(hidenElement.hidden == true) {
+      event.target.style="font-weight: 400"
+      
+   } else {
+      event.target.style="font-weight: 700"
+   }
+ }
 

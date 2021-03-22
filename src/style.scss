@@ -17,6 +17,7 @@ $backgroundList:
    letter-spacing: $h2_letter_space;
 }
 
+
 * {
    margin: 0;
    padding: 0;
@@ -58,7 +59,7 @@ body{
  main{
     width: 100%;
     .first_screen{
-       height: 100vh;
+      //  height: 100vh;
        background: linear-gradient(0deg, rgba(57, 87, 52, 0.32),rgba(57, 87, 52, 0.32)), 
                    url(./img/дом-из-дерева-белого-цвета.jpg);
       background-repeat: no-repeat;
@@ -74,7 +75,7 @@ body{
          @include light_h2();
       }
       p{
-         padding-top: 30px;
+         padding: 3rem 0;
          line-height: 24px;
          letter-spacing: 5px;
       }
@@ -113,10 +114,19 @@ body{
          font-size: 24px;
          color: $text_color_light;
          letter-spacing: 5px;
+         outline: none;
       }
+      button:hover{
+         background: #55814d;
+         cursor: pointer;
+      }
+      button:active {
+         transform: translateY(-1px);
+         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+     }
     }
     .our_cases{
-       height: 100vh;
+      //  height: 100vh;
        background: rgba(57, 87, 52, 0.32);
        display: flex;
        flex-direction: column;
@@ -132,32 +142,15 @@ body{
           grid-auto-rows: 350px;
           grid-column-gap: 160px;
           grid-row-gap: 50px;
-          #case1{
-            background: url(./img/Back_Case/безцветный.jpg)
-          }
-          #case2{
-            background: url(./img/Back_Case/дом-из-дерева-белого-цвета.jpg)
-          }
-          #case3{
-            background: url(./img/Back_Case/дом-из-темного-бруса.jpg)
-          }
-          #case4{
-            background: url(./img/Back_Case/коричневый.jpg)
-          }
-          #case5{
-            background: url(./img/Back_Case/серый.jpg)
-          }
-          #case6{
-            background: url(./img/Back_Case/красный.jpg)
-          }
           .__case{
             border-radius: 25px;
-            background-size: cover !important;
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
+            overflow: hidden;
+            img{
+               height: 350px;
+               width: 305px;
+               object-fit: cover;
+            }
             span{
                padding-bottom: 20px;
                color: $text_color_light;
@@ -171,7 +164,7 @@ body{
        }
     }
     .our_services{
-      height: 100vh;
+      // height: 100vh;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 81.25%), #BFC9BD;
       display: flex;
       flex-direction: column;
@@ -179,7 +172,7 @@ body{
       justify-content: center;
       h2{
          @include light_h2();
-         padding: 0 0 10rem;
+         padding: 5rem 0;
       }
       .__services{
          min-width: 1235px;
@@ -192,7 +185,10 @@ body{
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
             border-radius: 25px;
             background: #57C855;
+            outline: none;
             a{
+               display: inline-block;
+               width: 100%;
                color:#FFFFFF;
                font-size: 18px;
                letter-spacing: 5px;
@@ -203,6 +199,13 @@ body{
          .order_btn:hover, .__services_card:hover{
             cursor: pointer;
          }
+         .order_btn:hover{
+            background: #458644;
+         }
+         .order_btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
          
          .grinding{
             background: url(../src/img/шлиф.png), white;
@@ -212,7 +215,6 @@ body{
          }
          .warm_seam{
             background: url(../src/img/шов.png), white;
-            
          }
          .__services_card{
             width: 300px;
@@ -238,11 +240,30 @@ body{
                   letter-spacing: 3px;
                }
             }
+            .active{
+               width: 100%;
+               max-width: 500px;
+               
+               /*  Центрируем и задаем z-index */
+               position: fixed;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               z-index: 30; /* Должен быть выше чем у подложки*/
+               
+               /*  Побочные стили   */
+               box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+               text-align: center;
+               padding: 30px;
+               border-radius: 3px;
+               background-color: #fff;
+               transition: 0.3s all;
+            }
          }
       }
     }
     .commercial_block{
-      height: 100vh;
+      // height: 100vh;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 23.44%, #FFFFFF 98.96%), linear-gradient(180deg, #FFFFFF 11.46%, rgba(255, 255, 255, 0) 63.54%), url(./img/Back_Case/красный.jpg);
       // opacity: 0.5;
       background-size: cover;
@@ -251,6 +272,7 @@ body{
       align-items: center;
       justify-content: center;
       h2{
+         padding: 5rem 0;
          width: 1235px;
          color: black;
          font-size: $h2_font-size;
@@ -323,7 +345,7 @@ body{
       align-items: center;
       background: linear-gradient(180deg, #FFFFFF 15.62%, #BFC9BD 100%);
       h2{
-         padding-top: 50px;
+         padding-top: 10rem;
          color: black;
          font-size: $h2_font-size;
          letter-spacing: $h2_letter_space;
@@ -360,7 +382,7 @@ body{
      
     }
     .about{
-       height: 100vh;
+      //  height: 100vh;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -368,13 +390,14 @@ body{
        background-size: cover;
        h2{
           @include light_h2();
-          padding: 10% 0 15%;
+          padding: 5rem 0;
        }
        p{
           width: 60%;
           color: #FFFFFF;
           line-height: 24px;
           letter-spacing: 3px;
+          padding-bottom: 5rem;
       }
     }
  }
@@ -420,3 +443,73 @@ body{
       color: #ffffff41;;
    }
  }
+
+ /* Стили для подложки */
+.overlay {
+   
+   /* Скрываем подложку  */
+   opacity: 0;
+   visibility: hidden;
+   
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, .5);
+   z-index: 20;
+   transition: .3s all;
+}
+/* Стили для модальных окон */
+.modal {
+   
+   /* Скрываем окна  */
+   opacity: 0;
+   visibility: hidden;
+   
+   
+   /*  Установаем ширину окна  */
+   width: 100%;
+   max-width: 80%;
+   
+   /*  Центрируем и задаем z-index */
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 30; /* Должен быть выше чем у подложки*/
+   
+   /*  Побочные стили   */
+   box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+   text-align: center;
+   padding: 30px;
+   border-radius: 3px;
+   background-color: #fff;
+   transition: 0.3s all;
+   img{
+      float: left;
+      max-height: 60vh;
+   }
+   .modal__title{
+      padding: 5rem 0 0 30rem;
+      text-align: start;
+      font-size: 18px;
+      line-height: 24px;
+      font-family: 'Roboto', sans-serif;
+   }
+}
+/* Стили для кнопки закрытия */
+.modal__cross {
+   width: 15px;
+   height: 15px;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   fill: #444;
+   cursor: pointer;
+}
+.modal.active,
+.overlay.active{
+   opacity: 1;
+   visibility: visible;
+}

@@ -59,9 +59,8 @@ body{
  main{
     width: 100%;
     .first_screen{
-      //  height: 100vh;
        background: linear-gradient(0deg, rgba(57, 87, 52, 0.32),rgba(57, 87, 52, 0.32)), 
-                   url(./img/дом-из-дерева-белого-цвета.jpg);
+                   url(./img/Back_Case/case6.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -126,7 +125,6 @@ body{
      }
     }
     .our_cases{
-      //  height: 100vh;
        background: rgba(57, 87, 52, 0.32);
        display: flex;
        flex-direction: column;
@@ -164,7 +162,6 @@ body{
        }
     }
     .our_services{
-      // height: 100vh;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 81.25%), #BFC9BD;
       display: flex;
       flex-direction: column;
@@ -263,9 +260,7 @@ body{
       }
     }
     .commercial_block{
-      // height: 100vh;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 23.44%, #FFFFFF 98.96%), linear-gradient(180deg, #FFFFFF 11.46%, rgba(255, 255, 255, 0) 63.54%), url(./img/Back_Case/красный.jpg);
-      // opacity: 0.5;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 23.44%, #FFFFFF 98.96%), linear-gradient(180deg, #FFFFFF 11.46%, rgba(255, 255, 255, 0) 63.54%), url(./img/Back_Case/case4.jpg);
       background-size: cover;
       display: flex;
       flex-direction: column;
@@ -289,7 +284,6 @@ body{
                               "wood    old   ." ;
       }
       .topic{
-         // width: 410px;
          height: 145px;
          border-radius: 10px;
          border: 2px solid #000000;
@@ -335,8 +329,6 @@ body{
       .__new{
          grid-area: newHouse;
       }
-
-      
     }
     .faq{
        margin: 0 auto;
@@ -352,7 +344,6 @@ body{
          padding-bottom: 30px;
       }
       ul{
-         // margin-top: 15%;
          list-style-type: none;
          width: 50%;
          padding-bottom: 100px;
@@ -382,7 +373,6 @@ body{
      
     }
     .about{
-      //  height: 100vh;
        display: flex;
        flex-direction: column;
        align-items: center;

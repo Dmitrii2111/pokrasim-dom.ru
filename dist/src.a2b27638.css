@@ -46,7 +46,6 @@ main {
   width: 100%;
 }
 main .first_screen {
-  height: 100vh;
   background: linear-gradient(0deg, rgba(57, 87, 52, 0.32), rgba(57, 87, 52, 0.32)), url(/дом-из-дерева-белого-цвета.464411ce.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,7 +63,7 @@ main .first_screen h2 {
   letter-spacing: 20px;
 }
 main .first_screen p {
-  padding-top: 30px;
+  padding: 3rem 0;
   line-height: 24px;
   letter-spacing: 5px;
 }
@@ -105,9 +104,17 @@ main .form_section button {
   font-size: 24px;
   color: #FFFFFF;
   letter-spacing: 5px;
+  outline: none;
+}
+main .form_section button:hover {
+  background: #55814d;
+  cursor: pointer;
+}
+main .form_section button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 main .our_cases {
-  height: 100vh;
   background: rgba(57, 87, 52, 0.32);
   display: flex;
   flex-direction: column;
@@ -127,32 +134,15 @@ main .our_cases .__case_galery {
   grid-column-gap: 160px;
   grid-row-gap: 50px;
 }
-main .our_cases .__case_galery #case1 {
-  background: url(/безцветный.b7e9288f.jpg);
-}
-main .our_cases .__case_galery #case2 {
-  background: url(/дом-из-дерева-белого-цвета.4e00efde.jpg);
-}
-main .our_cases .__case_galery #case3 {
-  background: url(/дом-из-темного-бруса.255dab22.jpg);
-}
-main .our_cases .__case_galery #case4 {
-  background: url(/коричневый.5a180750.jpg);
-}
-main .our_cases .__case_galery #case5 {
-  background: url(/серый.07e2bb6e.jpg);
-}
-main .our_cases .__case_galery #case6 {
-  background: url(/красный.f18ce15e.jpg);
-}
 main .our_cases .__case_galery .__case {
   border-radius: 25px;
-  background-size: cover !important;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  overflow: hidden;
+}
+main .our_cases .__case_galery .__case img {
+  height: 350px;
+  width: 305px;
+  object-fit: cover;
 }
 main .our_cases .__case_galery .__case span {
   padding-bottom: 20px;
@@ -164,7 +154,6 @@ main .our_cases .__case_galery .__case:hover {
   cursor: pointer;
 }
 main .our_services {
-  height: 100vh;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 81.25%), #BFC9BD;
   display: flex;
   flex-direction: column;
@@ -175,7 +164,7 @@ main .our_services h2 {
   color: #FFFFFF;
   font-size: 36px;
   letter-spacing: 20px;
-  padding: 0 0 10rem;
+  padding: 5rem 0;
 }
 main .our_services .__services {
   min-width: 1235px;
@@ -189,9 +178,12 @@ main .our_services .__services .order_btn {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
   background: #57C855;
+  outline: none;
   border: none;
 }
 main .our_services .__services .order_btn a {
+  display: inline-block;
+  width: 100%;
   color: #FFFFFF;
   font-size: 18px;
   letter-spacing: 5px;
@@ -199,6 +191,13 @@ main .our_services .__services .order_btn a {
 }
 main .our_services .__services .order_btn:hover, main .our_services .__services .__services_card:hover {
   cursor: pointer;
+}
+main .our_services .__services .order_btn:hover {
+  background: #458644;
+}
+main .our_services .__services .order_btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 main .our_services .__services .grinding {
   background: url(/шлиф.50240994.png), white;
@@ -234,8 +233,25 @@ main .our_services .__services .__services_card .__text_block h3 {
   padding: 18px 0 23px;
   letter-spacing: 3px;
 }
+main .our_services .__services .__services_card .active {
+  width: 100%;
+  max-width: 500px;
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  /* Должен быть выше чем у подложки*/
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
 main .commercial_block {
-  height: 100vh;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 23.44%, #FFFFFF 98.96%), linear-gradient(180deg, #FFFFFF 11.46%, rgba(255, 255, 255, 0) 63.54%), url(/красный.f18ce15e.jpg);
   background-size: cover;
   display: flex;
@@ -244,6 +260,7 @@ main .commercial_block {
   justify-content: center;
 }
 main .commercial_block h2 {
+  padding: 5rem 0;
   width: 1235px;
   color: black;
   font-size: 36px;
@@ -311,7 +328,7 @@ main .faq {
   background: linear-gradient(180deg, #FFFFFF 15.62%, #BFC9BD 100%);
 }
 main .faq h2 {
-  padding-top: 50px;
+  padding-top: 10rem;
   color: black;
   font-size: 36px;
   letter-spacing: 20px;
@@ -344,7 +361,6 @@ main .faq ul li p {
   background: #71a3614d;
 }
 main .about {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -355,13 +371,14 @@ main .about h2 {
   color: #FFFFFF;
   font-size: 36px;
   letter-spacing: 20px;
-  padding: 10% 0 15%;
+  padding: 5rem 0;
 }
 main .about p {
   width: 60%;
   color: #FFFFFF;
   line-height: 24px;
   letter-spacing: 3px;
+  padding-bottom: 5rem;
 }
 
 footer {
@@ -406,4 +423,71 @@ footer .location {
 }
 .autor a {
   color: #ffffff41;
+}
+
+/* Стили для подложки */
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+/* Стили для модальных окон */
+.modal {
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+  /*  Установаем ширину окна  */
+  width: 100%;
+  max-width: 80%;
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  /* Должен быть выше чем у подложки*/
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+.modal img {
+  float: left;
+  max-height: 60vh;
+}
+.modal .modal__title {
+  padding: 5rem 0 0 30rem;
+  text-align: start;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Стили для кнопки закрытия */
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
 }

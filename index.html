@@ -5,6 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Покрасим Дом</title>
+   <link rel="stylesheet" type="text/css" href="./src/jquery.fancybox.min.css">
 </head>
 <body>
    <header>
@@ -36,22 +37,34 @@
          <h2>Наши Работы</h2>
          <div class="__case_galery">
             <div id="case1" class="__case">
-               <span>описание</span>
+               <a href="./src/img/Back_Case/безцветный.jpg" data-fancybox="gallery" data-caption="Описание">
+                  <img src="./src/img/Back_Case/безцветный.jpg" alt="">
+               </a>
             </div>
             <div id="case2" class="__case">
-               <span>описание</span>
+               <a href="./src/img/Back_Case/дом-из-дерева-белого-цвета.jpg" data-fancybox="gallery" data-caption="Описание">
+                  <img src="./src/img/Back_Case/дом-из-дерева-белого-цвета.jpg" alt="">
+               </a>
             </div>
             <div id="case3" class="__case">
-               <span>описание</span>
+                <a href="./src/img/Back_Case/дом-из-темного-бруса.jpg" data-fancybox="gallery" data-caption="Описание">
+                  <img src="./src/img/Back_Case/дом-из-темного-бруса.jpg" alt="">
+               </a>
             </div>
             <div id="case4" class="__case">
-               <span>описание</span>
+                <a href="./src/img/Back_Case/коричневый.jpg" data-fancybox="gallery" data-caption="Описание">
+                  <img src="./src/img/Back_Case/коричневый.jpg" alt="">
+               </a>
             </div>
             <div id="case5" class="__case">
-               <span>описание</span>
+                <a href="./src/img/Back_Case/красный.jpg" data-fancybox="gallery" data-caption="Описание">
+                  <img src="./src/img/Back_Case/красный.jpg" alt="">
+               </a>
             </div>
             <div id="case6" class="__case">
-               <span>описание</span>
+                <a href="./src/img/Back_Case/серый.jpg" data-fancybox="gallery" data-caption="Описание">
+                  <img src="./src/img/Back_Case/серый.jpg" alt="">
+               </a>
             </div>
          </div>
       </div>
@@ -59,30 +72,57 @@
          <h2>Наши Услуги</h2>
          <div class="__services">
             <div class="__service_container">
-               <div class="grinding __services_card">
+               <div class="grinding __services_card" data-modal="grinding">
                   <div class="__text_block">
                      <h3>Шлифовка</h3>
                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatem exercitationem fuga consequuntur molestiae nemo.</span>
                   </div>
                </div>
+                           <!-- модальное окно -->
+                           <div class="modal" data-modal="grinding">
+                              <!--   Svg иконка для закрытия окна  -->
+                              <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                              <img src="./src/img/шлиф.png" alt="Шлифовка">
+                              <p class="modal__title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos iure voluptatibus minima eligendi consequuntur sint enim, vel repellendus temporibus asperiores dolorem accusantium eveniet aperiam veritatis aliquid aspernatur maxime ex quas, quia ut provident. Commodi quasi temporibus assumenda ut, ducimus nisi, recusandae esse sed cumque, nam est illo deserunt placeat officiis vel corrupti amet. Delectus consectetur maxime doloremque laborum qui accusamus earum incidunt eaque, vel molestiae repudiandae itaque accusantium illum asperiores eos natus nulla at ipsam labore quia. Nihil assumenda cum doloremque explicabo omnis pariatur minima impedit repellat quis libero ex, illum voluptatem labore ut reiciendis alias itaque? Laudantium, optio?</p>
+                           </div>
+                           <!-- Подложка под модальным окном -->
+                           <div class="overlay" id="overlay-modal"></div>
                <button class="order_btn"><a href="#contact_us">Заказать</a></button>
             </div>
             <div class="__service_container">
-               <div class="painting __services_card">
+               <div class="painting __services_card" data-modal="painting">
                   <div class="__text_block">
                      <h3>Покраска</h3>
                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatem exercitationem fuga consequuntur molestiae nemo.</span>
                   </div>
                </div>
+                        <!-- модальное окно -->
+                        <div class="modal" data-modal="painting">
+                           <!--   Svg иконка для закрытия окна  -->
+                           <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                           <img src="./src/img/7b3d652b67aa0aec24451e98778ec63e.png" alt="Покраска">
+                           <p class="modal__title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem asperiores illo voluptatibus pariatur molestias velit sed blanditiis, tempore earum veritatis libero beatae nam assumenda, eligendi at rem fugit vero harum inventore maiores possimus itaque. Corrupti nostrum facere officia aliquam esse dignissimos sit excepturi voluptate dicta facilis quos fugiat minima in, maxime, aut possimus delectus unde molestias? Repellendus, totam. Iure alias nihil unde voluptatem, quae cumque est eveniet commodi voluptates accusamus odio sequi ipsum rerum ipsam eum? Iure alias tempore illo doloremque laboriosam repudiandae, soluta laborum maiores temporibus vero adipisci. Eos, rerum. Expedita quibusdam necessitatibus distinctio laudantium dicta quasi eligendi praesentium!</p>
+                        </div>
+                        <!-- Подложка под модальным окном -->
+                        <div class="overlay" id="overlay-modal"></div>
                <button class="order_btn"><a href="#contact_us">Заказать</a></button>
             </div>
             <div class="__service_container">
-               <div class="warm_seam __services_card">
+               <div class="warm_seam __services_card" data-modal="warm_seam">
                   <div class="__text_block">
                      <h3>Теплый шов</h3>
                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatem exercitationem fuga consequuntur molestiae nemo.</span>
                   </div>
                </div>
+                        <!-- модальное окно -->
+                        <div class="modal" data-modal="warm_seam">
+                           <!--   Svg иконка для закрытия окна  -->
+                           <img src="./src/img/шов.png" alt="Теплый шов">
+                           <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                           <p class="modal__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ab id nemo iusto! Repellat id tempore quas. In, sint. Veniam, perspiciatis explicabo doloremque dolores sapiente aspernatur fugit fuga ab natus pariatur enim eaque hic ex. Ipsam quis labore saepe ullam reprehenderit nobis minima est unde, itaque nostrum quae aut asperiores commodi ex temporibus molestiae assumenda nihil, natus ut quo. Nihil doloremque quibusdam doloribus obcaecati consequatur animi sunt, porro, quos earum quam debitis nisi? Fugit vero aliquam expedita debitis dolore provident repellendus quos, repudiandae quae dolores? Eius adipisci non quasi aliquam deserunt, magni officia dolor! Similique neque porro illum optio fuga?</p>
+                        </div>
+                        <!-- Подложка под модальным окном -->
+               <div class="overlay" id="overlay-modal"></div>
                <button class="order_btn"><a href="#contact_us">Заказать</a> </button>
             </div>
          </div>
@@ -151,17 +191,19 @@
          <span>Почта:</span>
          <span>Мы в соцсетях</span>
          <div class="social">
-            <a href=""><img src="./src/img/logos_facebook.png" alt=""></a>
-            <a href=""><img src="./src/img/logos_instagram.png" alt=""></a>
-            <a href=""><img src="./src/img/el_vkontakte.png" alt=""></a>
+            <a href="" target="blank"><img src="./src/img/logos_facebook.png" alt=""></a>
+            <a href="" target="blank"><img src="./src/img/logos_instagram.png" alt=""></a>
+            <a href="" target="blank"><img src="./src/img/el_vkontakte.png" alt=""></a>
          </div>
       </div>
       <div class="location">
          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A027ba35633ce7911a63e4fd3c54bbd317cb0ed045826b05e81f30e60b4c69ba7&amp;width=524&amp;height=348&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
    </footer>
-   <span class="autor">Created by <a href="https://github.com/Dmitrii2111">Dmitriy Hrulev</a></span>
+   <span class="autor">Created by <a href="https://github.com/Dmitrii2111" target="blank">Dmitriy Hrulev</a></span>
    <script src="./src/index.js"></script>
    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="./src/JS/jquery.fancybox.min.js"></script>
 </body>
 </html>

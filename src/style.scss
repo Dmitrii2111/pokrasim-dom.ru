@@ -24,7 +24,7 @@ $backgroundList:
 }
 body{
    font-family: 'Roboto', sans-serif;
-   font-size: 14px;
+   font-size: 16px;
 }
  header{
    padding: 2rem 5rem ;
@@ -66,11 +66,11 @@ body{
       background-position: center center;
       h2, p{
          color: rgba(255, 255, 255, 0.72);
-         margin-left: 20%;
-         width: 30%;
+         margin-left: 10%;
+         width: 40%;
       }
       h2{
-         padding-top: 15%;
+         padding-top: 30rem;
          @include light_h2();
       }
       p{
@@ -93,15 +93,34 @@ body{
       form{
          width: 70%;
          display: flex;
-         justify-content: space-around;
-         input{
-            width: 286px;
-            height: 46px;
-            border-radius: 20px;
-            outline: none;
-            border: none;
-            padding-left: 15px;
+         flex-direction: column;
+         align-items: center;
+         .inputs{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            .single_input_block{
+               display: flex;
+               flex-direction: column;
+               input{
+                  width: 286px;
+                  height: 46px;
+                  border-radius: 20px;
+                  outline: none;
+                  border: none;
+                  padding-left: 15px;
+               }
+               .error{
+                  background: url(./img/icon-error.svg) white no-repeat 95% center;
+               }
+               span{
+                  visibility: hidden;
+                  padding: 0.5rem 0 0 1rem;
+                  color: hsl(0, 100%, 74%);
+               }
+            }
          }
+         
       }
       button{
          margin-top: 2rem;
@@ -350,16 +369,23 @@ body{
          li{
             padding: 10px 0 10px;
             .text_block{
-               background: url(./img/chevron-down-outline.svg) white;
-               background-repeat: no-repeat;
-               background-position: center right 5%;
-               background-size: 5%;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               background: #fff;
                padding: 20px ;
                border-radius: 25px;
                border: 0.5px solid rgba(0, 0, 0, 0.068);
                box-sizing: border-box;
                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
-               
+               img{
+                  margin-left: 10px;
+                  display: inline-block;
+                  width: 30px;
+               }
+            }
+            .text_block:hover{
+               cursor: pointer;
             }
             p{
                margin-top: 10px;
@@ -383,8 +409,9 @@ body{
           padding: 5rem 0;
        }
        p{
+          text-indent: 2rem;
           width: 60%;
-          color: #FFFFFF;
+          color: #fafafa;
           line-height: 24px;
           letter-spacing: 3px;
           padding-bottom: 5rem;
@@ -413,6 +440,9 @@ body{
          padding: 40px 0;
          a{
             padding-right: 15px;
+         }
+         a:last-child img{
+            border-radius: 10px;
          }
       }
     }
@@ -483,6 +513,7 @@ body{
    .modal__title{
       padding: 5rem 0 0 30rem;
       text-align: start;
+      text-indent: 2rem;
       font-size: 18px;
       line-height: 24px;
       font-family: 'Roboto', sans-serif;
@@ -502,4 +533,298 @@ body{
 .overlay.active{
    opacity: 1;
    visibility: visible;
+}
+
+// Адаптивная верстка
+@media (max-width: 1350px) {
+   header{
+      ul{
+         width: 40%;
+      }
+   }
+   main{
+      .form_section{
+         form{
+            width: 90%;
+         }
+      }
+   }
+}
+@media (max-width: 1275px){
+   main{
+      .our_cases{
+         .__case_galery{
+            min-width: unset;
+            width:90%;
+            grid-column-gap: 6%;
+            .__case{
+               img{
+                  object-fit: cover;
+               }
+            }
+         }
+      }
+      .our_services{
+         .__services{
+            min-width: unset;
+            width: 90%;
+         }
+      }
+      .commercial_block{
+         h2{
+            width: unset;
+         }
+         .topics_container{
+            width: 90%;
+            min-width: unset;
+            grid-column-gap: 45px;
+         }
+      }
+      .faq{
+         ul{
+            width: 80%;
+         }
+      }
+      .about{
+         p{
+            width: 80%;
+         }
+      }
+   }
+}
+@media (max-width:1025px) {
+   header{
+      ul{
+         width: 50%;
+      }
+   }
+   main {
+      .form_section {
+         form {
+            .inputs{ 
+               .single_input_block input{
+                  width: unset;
+               }
+            }
+         }
+      }
+   }
+   .modal .modal__title {
+      padding: unset;
+   }
+}
+@media (max-width: 770px) {
+   header{
+
+   }
+   main{
+      .first_screen{
+         h2{
+            padding-top: 15rem;
+         }
+         p{
+            width: 60%;
+         }
+      }
+      .form_section {
+         form {
+            .inputs{ 
+               .single_input_block input{
+                  max-width: 80%;
+               }
+            }
+         }
+         button{
+            margin-top: unset;
+         }
+      }
+      .our_cases .__case_galery{
+         grid-template-columns: repeat(2, 1fr);
+         grid-column-gap: auto;
+         .__case img{
+            object-fit: fill;
+            width: unset;
+         }
+      }
+      .our_services{
+         h2{
+            padding: 3rem 0;
+         }
+         .__services{
+            flex-direction: column;
+            .order_btn{
+               margin-top: 1.5rem;
+               width: 100%;
+               margin-bottom: 1.5rem;
+            }
+            .__service_container{
+               .__services_card{
+                  background-size: 150px;
+                  width: unset;
+                  height: unset;
+                  .__text_block{
+                     margin-top: 20%;
+                  }
+               }
+            }
+         }
+      }
+      .commercial_block{
+         h2{
+            padding: 2rem 0 2rem 1rem;
+         }
+         .topic{
+            height: unset;
+            padding-bottom: 10px;
+         }
+      }
+      .faq{
+         h2{
+            text-align: center;
+         }
+         ul{
+            padding-bottom: 3rem;
+         }
+      }
+   }
+   footer{
+      flex-direction: column;
+      align-items: center;
+      .contacts{
+         width: 80%;
+         padding-bottom: 0;
+      }
+      .location{
+         padding-top: 0;
+         margin-bottom: 20px;
+      }
+   }
+   .modal {
+      img{
+      float: unset;
+      }
+      .modal__title{
+         padding: unset;
+      }
+   }
+}
+
+@media (max-width: 600px) {
+   header{
+      .menu{
+         display:none;
+      }
+   }
+   main{
+      h2{
+         text-align: center;
+         font-size: 24px;
+         letter-spacing: 4px;
+      }
+      .first_screen{
+         h2{
+            padding-top: 5rem;
+         }
+         p{
+            width: 90%;
+            margin: 0 auto;
+            letter-spacing: 2px;
+         }
+      }
+      .form_section{
+         padding: 1rem 0 2rem;
+         h2{
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: 4px;
+         }
+         form .inputs{
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+            .single_input_block {
+               width: 100%;
+               input{
+                  max-width: unset;
+                  width: 100%
+               }
+               span{
+                  padding: 0.5rem 0 0.5rem 1rem;
+               }
+            }
+         }
+      }
+      .our_cases{
+         h2{
+            width: 95%;
+            font-size: 24px; 
+            letter-spacing: 4px;
+            padding: 2rem 0;
+         }
+         .__case_galery{
+            grid-template-columns: repeat(1, 1fr);
+            #case5{
+               display: none;
+            }
+            #case6{
+               display: none;
+            }
+         }
+      }
+      .our_services{
+         h2{
+            width: 95%;
+           font-size: 24px; 
+           letter-spacing: 4px;
+           padding: 2rem 0;
+         }
+         .__services .__service_container .__services_card .__text_block{
+            margin-top: 40%;
+         }
+      }
+      .commercial_block{
+         h2{
+           width: 95%;
+           font-size: 24px; 
+           letter-spacing: 4px;
+           padding: 2rem 0;
+         }
+         .topics_container{
+            grid-template-areas: 
+            "newHouse sell "
+            "renew renew"
+            "wood old ";
+            grid-gap: 15px;
+         }
+      }
+      .faq{
+         h2{
+            width: 95%;
+            font-size: 24px; 
+            letter-spacing: 4px;
+            padding: 2rem 0; 
+         }
+         ul{
+            width: 90%;
+         }
+      }
+      .about{
+         h2{
+            width: 95%;
+            font-size: 24px; 
+            letter-spacing: 4px;
+            padding: 2rem 0; 
+         }
+         p{
+            width: 90%;
+            margin: 0 auto;
+            letter-spacing: 2px;
+         }
+      }
+   }
+   footer{
+      .location{
+         display: none;
+      }
+   }
 }

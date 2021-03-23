@@ -1,2 +1,4 @@
 import './style.scss'
-import './JS/pure_js'
+import './JS/formValidate'
+import './JS/faq'
+import './JS/modal'

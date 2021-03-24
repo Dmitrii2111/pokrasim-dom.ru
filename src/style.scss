@@ -24,7 +24,6 @@ $backgroundList:
    padding: 0;
 }
 body{
-   width: 100%;
    font-family: 'Roboto', sans-serif;
    font-size: 16px;
 }
@@ -494,7 +493,7 @@ body{
     display: flex;
     justify-content: space-around;
     .contacts{
-      padding: 40px;
+      padding-top: 40px;
       h3{
          font-size: 18px;
          color: #FFFFFF;

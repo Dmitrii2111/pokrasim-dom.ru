@@ -16,21 +16,21 @@
      </div>
       <ul class="menu">
          <li><a href="#our_services">наши услуги</a></li>
-         <li><a href="#our_services">цены</a></li>
-         <li><a href="#our_cases">наши работы</a></li>   
+         <li><a href="#our_cases">наши работы</a></li>
+         <li><a href="#reviews">отзывы</a></li>
          <li><a href="#about">о нас</a></li>
       </ul>
    </header>
    <main>
-      <div class="first_screen">
+      <section class="first_screen">
          <h2>Lorem</h2>
          <p>
             Создайте уют  и тепло в вашем доме, верните первозданный вид вашему жилищу вместе с нами . Качественное выполнение работ по шлифовке , покраске и утеплению . Только лучшие материалы и самые опытные специалисты.
             <br>
             Мы видим разницу между хорошо и отлично , а Вы?
          </p>
-      </div>
-      <div id="contact_us" class="form_section">
+      </section>
+      <section id="contact_us" class="form_section">
          <h2>Мы Вам перезвоним</h2>
          <form id="form" novalidate name="contact_us" action="#">
             <div class="inputs">
@@ -49,8 +49,8 @@
             </div>
             <button id="submit" form="contact_us" type="submit"> Отправить</button>
          </form>    
-      </div>
-      <div id="our_cases" class="our_cases">
+      </section>
+      <section id="our_cases" class="our_cases">
          <h2>Наши Работы</h2>
          <div class="__case_galery">
             <div id="case1" class="__case">
@@ -84,8 +84,8 @@
                </a>
             </div>
          </div>
-      </div>
-      <div id="our_services" class="our_services">
+      </section>
+      <section id="our_services" class="our_services">
          <h2>Наши Услуги</h2>
          <div class="__services">
             <div class="__service_container">
@@ -159,8 +159,85 @@
                <button class="order_btn"><a href="#contact_us">Заказать</a> </button>
             </div>
          </div>
-      </div>
-      <div class="commercial_block">
+      </section>
+      <section id="reviews" class="reviews">
+         <h2>Отзывы</h2>
+         <div class="reviews__wrapper">
+            <div class="review__card first_customer">
+               <div class="card__header">
+                  <img src="./src/img/image-victor.jpg" alt="Фото">
+                  <div class="header__info">
+                     <ul>
+                        <li id="name_customer">Name</li>
+                        <li id="name_service">Service</li>
+                        <li id="object_location">Location</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="rating">
+                  <ul>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                  </ul>
+               </div>
+               <div class="review__text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore quas atque nulla ullam ex sequi eos. Odit tempora suscipit dolore?
+               </div>
+            </div>
+            <div class="review__card second_customer">
+               <div class="card__header">
+                  <img src="./src/img/image-victor.jpg" alt="Фото">
+                  <div class="header__info">
+                     <ul>
+                        <li id="name_customer">Name</li>
+                        <li id="name_service">Service</li>
+                        <li id="object_location">Location</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="rating">
+                  <ul>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                  </ul>
+               </div>
+               <div class="review__text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore quas atque nulla ullam ex sequi eos. Odit tempora suscipit dolore?
+               </div>
+            </div>
+            <div class="review__card third_customer">
+               <div class="card__header">
+                  <img src="./src/img/image-victor.jpg" alt="Фото">
+                  <div class="header__info">
+                     <ul>
+                        <li id="name_customer">Name</li>
+                        <li id="name_service">Service</li>
+                        <li id="object_location">Location</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="rating">
+                  <ul>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                     <li><ion-icon name="star"></ion-icon></li>
+                  </ul>
+               </div>
+               <div class="review__text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore quas atque nulla ullam ex sequi eos. Odit tempora suscipit dolore?
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="commercial_block">
          <h2>Вам подойдет <br> наше предложение если: </h2>
          <div class="topics_container">
             <div class="topic __new">
@@ -183,8 +260,8 @@
                <h3>Вам нужно обновить уже окрашенную поверхность</h3>
             </div>
          </div>
-      </div>
-      <div class="faq">
+      </section>
+      <section class="faq">
          <h2>Часто задаваемые вопросы</h2>
          <ul id="list">
             <li>
@@ -228,14 +305,14 @@
               <p hidden>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
             </li> -->
           </ul>
-      </div>
-      <div id="about" class="about">
+      </section>
+      <section id="about" class="about">
          <h2>О нас</h2>
          <p>
             Многие из нас выбирают жизнь в деревянном доме, считая это полезным для здоровья и приятным с эстетической точки зрения. Основное преимущество жизни в таком доме – экологичность. Дом из дерева «дышит», так как построен из природного материала. Однако чтобы деревянный дом прослужил долгие годы и был комфортным для жизни, необходимо грамотно подойти к вопросу его утепления и отделки.
             Наша компания одна из первых в центральном регионе России освоила технологию утепления деревянных домов герметиком ''теплый шов''. Основное звено наших бригад остается неизменным, и большинство специалистов имеют более 10 лет опыта работы по отделке и утеплению деревянных домов. В работе мы применяем только проверенные и качественные материалы для утепления и обработки древесины ведущих европейских производителей.
          </p>
-      </div>
+      </section>
    </main>
    <footer>
       <div class="contacts">

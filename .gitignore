@@ -106,3 +106,5 @@ typings/
 # Макеты
 /PDF
 /src/img
+
+/.DS_Store

@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./img/Back_Case/case6.jpg":[["case6.b5ffdd7d.jpg","src/img/Back_Case/case6.jpg"],"src/img/Back_Case/case6.jpg"],"./img/icon-error.svg":[["icon-error.d32343f4.svg","src/img/icon-error.svg"],"src/img/icon-error.svg"],"./img/шлиф.png":[["шлиф.50240994.png","src/img/шлиф.png"],"src/img/шлиф.png"],"./img/7b3d652b67aa0aec24451e98778ec63e.png":[["7b3d652b67aa0aec24451e98778ec63e.4e9f8557.png","src/img/7b3d652b67aa0aec24451e98778ec63e.png"],"src/img/7b3d652b67aa0aec24451e98778ec63e.png"],"./img/шов.png":[["шов.07e7faf9.png","src/img/шов.png"],"src/img/шов.png"],"./img/Back_Case/case4.jpg":[["case4.4162923a.jpg","src/img/Back_Case/case4.jpg"],"src/img/Back_Case/case4.jpg"],"./img/done.png":[["done.e786e7d3.png","src/img/done.png"],"src/img/done.png"],"./img/pexels-eva-elijas-5940999.jpg":[["pexels-eva-elijas-5940999.def3310b.jpg","src/img/pexels-eva-elijas-5940999.jpg"],"src/img/pexels-eva-elijas-5940999.jpg"],"_css_loader":"../../../../.nvm/versions/node/v12.16.3/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/JS/formValidate.js":[function(require,module,exports) {
+},{"./img/Back_Case/case6.jpg":[["case6.b5ffdd7d.jpg","src/img/Back_Case/case6.jpg"],"src/img/Back_Case/case6.jpg"],"./img/icon-error.svg":[["icon-error.d32343f4.svg","src/img/icon-error.svg"],"src/img/icon-error.svg"],"./img/шлиф.png":[["шлиф.50240994.png","src/img/шлиф.png"],"src/img/шлиф.png"],"./img/7b3d652b67aa0aec24451e98778ec63e.png":[["7b3d652b67aa0aec24451e98778ec63e.4e9f8557.png","src/img/7b3d652b67aa0aec24451e98778ec63e.png"],"src/img/7b3d652b67aa0aec24451e98778ec63e.png"],"./img/шов.png":[["шов.07e7faf9.png","src/img/шов.png"],"src/img/шов.png"],"./img/Back_Case/case5.jpg":[["case5.288eebf3.jpg","src/img/Back_Case/case5.jpg"],"src/img/Back_Case/case5.jpg"],"./img/Back_Case/case4.jpg":[["case4.4162923a.jpg","src/img/Back_Case/case4.jpg"],"src/img/Back_Case/case4.jpg"],"./img/done.png":[["done.e786e7d3.png","src/img/done.png"],"src/img/done.png"],"./img/pexels-eva-elijas-5940999.jpg":[["pexels-eva-elijas-5940999.def3310b.jpg","src/img/pexels-eva-elijas-5940999.jpg"],"src/img/pexels-eva-elijas-5940999.jpg"],"_css_loader":"../../../../.nvm/versions/node/v12.16.3/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/JS/formValidate.js":[function(require,module,exports) {
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -362,7 +362,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64815" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52021" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -232,8 +232,8 @@ body{
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             img{
-               height: 350px;
-               width: 305px;
+               height: 400px;
+               width: 400px;
                object-fit: cover;
             }
             span{
@@ -345,6 +345,83 @@ body{
             }
          }
       }
+    }
+    .reviews{
+      background: linear-gradient(180deg, #FFFFFF 9.38%, rgba(255, 255, 255, 0) 76.56%), 
+                  linear-gradient(180deg, rgba(255, 255, 255, 0) 31.25%, #FFFFFF 87.5%), 
+                  url(./img/Back_Case/case5.jpg)
+                  no-repeat;
+      background-size: cover;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       h2{
+         padding-top: 5rem;
+         font-size: $h2_font-size;
+         letter-spacing: $h2_letter_space;
+       }
+       .reviews__wrapper{
+         display: flex;
+         justify-content: space-around;
+         padding: 5% 1% 0 1%;
+         .second_customer{
+            margin-top: 5%;
+         }
+         .third_customer{
+            margin-top: 10%;
+         }
+         .review__card{
+            margin-right: 20px;
+            box-shadow: 10px 10px 10px rgba(24, 132, 193, 0.48);
+            ul{
+               list-style-type: none;
+               li{
+                  padding-bottom: 10px;
+               }
+               li:last-child {
+                  padding-bottom: unset;
+                  color: #C4C4C4;
+               }
+            }
+            padding: 40px;
+            background: linear-gradient(180deg, #60936C 20.83%, rgba(24, 132, 193, 0.48) 82.81%);
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            max-width: 350px;
+            height: 350px;
+            .card__header{
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+               img{
+                  border-radius: 50%;
+               }
+            }
+            .rating ul{
+               padding-top: 10%;
+               display: flex;
+               padding-left: 10%;
+               li{
+                  padding-right: 10px;
+                  padding-bottom: unset;
+                  ion-icon{
+                     font-size: 24px;
+                     color: rgba(243, 202, 57, 1);
+                  }
+               }
+            }
+            .review__text{
+               text-indent: 1rem;
+               letter-spacing: 0.05em;
+               line-height: 24px;
+               padding-top: 15%;
+            }
+         }
+         .review__card:last-child{
+            margin-right: unset;
+         }
+       }
     }
     .commercial_block{
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 23.44%, #FFFFFF 98.96%), linear-gradient(180deg, #FFFFFF 11.46%, rgba(255, 255, 255, 0) 63.54%), url(./img/Back_Case/case4.jpg);
@@ -688,12 +765,35 @@ body{
             }
          }
       }
+      .our_services{
+         h2{
+            padding: 3rem 0;
+         }
+         .__services{
+            flex-direction: column;
+            .order_btn{
+               margin-top: 1.5rem;
+               width: 100%;
+               margin-bottom: 1.5rem;
+            }
+            .__service_container{
+               .__services_card{
+                  background-size: 150px;
+                  width: unset;
+                  height: unset;
+                  .__text_block{
+                     margin-top: 20%;
+                  }
+               }
+            }
+         }
+      }
    }
    .modal .modal__title {
       padding: unset;
    }
 }
-@media (max-width: 770px) {
+@media (max-width: 810px) {
    header{
       .logo{
          position:absolute;
@@ -739,26 +839,16 @@ body{
             width: unset;
          }
       }
-      .our_services{
-         h2{
-            padding: 3rem 0;
-         }
-         .__services{
+      .reviews{
+         .reviews__wrapper{
             flex-direction: column;
-            .order_btn{
-               margin-top: 1.5rem;
-               width: 100%;
-               margin-bottom: 1.5rem;
+            .review__card{
+               margin-right: unset;
+               max-width: 280px;
+               padding: 1rem;
             }
-            .__service_container{
-               .__services_card{
-                  background-size: 150px;
-                  width: unset;
-                  height: unset;
-                  .__text_block{
-                     margin-top: 20%;
-                  }
-               }
+            .second_customer, .third_customer{
+               margin-top: 5%;
             }
          }
       }

@@ -277,25 +277,46 @@ main .our_services .__services .order_btn:active {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 main .our_services .__services .grinding {
-  background: url(/шлиф.50240994.png), white;
+  background: white;
+}
+main .our_services .__services .grinding .__image-block {
+  background: url(/shlif.539bb90b.jpg);
+  width: 90%;
+  height: 40%;
+  background-size: cover;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 main .our_services .__services .painting {
-  background: url(/7b3d652b67aa0aec24451e98778ec63e.4e9f8557.png), white;
+  background: white;
+}
+main .our_services .__services .painting .__image-block {
+  background: url(/03-germetizatsiya-tortsov-03.e5941f54.jpg);
+  width: 90%;
+  height: 40%;
+  background-size: cover;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 main .our_services .__services .warm_seam {
-  background: url(/шов.07e7faf9.png), white;
+  background-color: white;
+}
+main .our_services .__services .warm_seam .__image-block {
+  background: url(/Germetik-v-dereve.9cdbadea.jpg);
+  width: 90%;
+  height: 40%;
+  background-size: cover;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 main .our_services .__services .__services_card {
   width: 300px;
   height: 445px;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: contain;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   text-align: center;
   align-items: center;
 }
@@ -303,6 +324,7 @@ main .our_services .__services .__services_card .__text_block {
   margin-bottom: 30px;
   padding-bottom: 15px;
   width: 80%;
+  min-height: 160px;
   border: 1px solid black;
   border-radius: 15px;
 }
@@ -360,7 +382,6 @@ main .reviews .reviews__wrapper .review__card {
   display: flex;
   flex-direction: column;
   max-width: 350px;
-  height: 350px;
 }
 main .reviews .reviews__wrapper .review__card ul {
   list-style-type: none;
@@ -379,6 +400,8 @@ main .reviews .reviews__wrapper .review__card .card__header {
 }
 main .reviews .reviews__wrapper .review__card .card__header img {
   border-radius: 50%;
+  width: 5rem;
+  margin-right: 10px;
 }
 main .reviews .reviews__wrapper .review__card .rating ul {
   padding-top: 10%;
@@ -484,6 +507,7 @@ main .faq h2 {
   font-size: 36px;
   letter-spacing: 20px;
   padding-bottom: 30px;
+  text-align: center;
 }
 main .faq ul {
   list-style-type: none;
@@ -621,9 +645,10 @@ footer .location {
   /*  Установаем ширину окна  */
   width: 100%;
   max-width: 80%;
+  max-height: 90vh;
   /*  Центрируем и задаем z-index */
   position: fixed;
-  top: 50%;
+  top: 27rem;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 30;
@@ -638,7 +663,9 @@ footer .location {
 }
 .modal img {
   float: left;
-  max-height: 60vh;
+  max-height: 80vh;
+  max-width: 50%;
+  padding-right: 20px;
 }
 .modal .modal__title {
   padding: 5rem 0 0 30rem;
@@ -723,12 +750,16 @@ footer .location {
     margin-bottom: 1.5rem;
   }
   main .our_services .__services .__service_container .__services_card {
-    background-size: 150px;
-    width: unset;
+    width: 100%;
     height: unset;
   }
+  main .our_services .__services .__service_container .__services_card .__image-block {
+    height: 30rem;
+    margin-bottom: 1rem;
+    background-position: center;
+  }
   main .our_services .__services .__service_container .__services_card .__text_block {
-    margin-top: 20%;
+    min-height: unset;
   }
 
   .modal .modal__title {
@@ -883,9 +914,6 @@ footer .location {
     font-size: 24px;
     letter-spacing: 4px;
     padding: 2rem 0;
-  }
-  main .our_services .__services .__service_container .__services_card .__text_block {
-    margin-top: 40%;
   }
   main .commercial_block h2 {
     width: 95%;

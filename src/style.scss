@@ -17,7 +17,14 @@ $backgroundList:
    font-size: $h2_font-size;
    letter-spacing: $h2_letter_space;
 }
-
+@mixin image_position_services {
+   width: 90%;
+   height: 40%;
+   background-size: cover;
+   border-radius: 10px;
+   margin-top: 20px;
+   
+}
 
 * {
    margin: 0;
@@ -292,31 +299,41 @@ body{
         }
          
          .grinding{
-            background: url(../src/img/шлиф.png), white;
+            background: white;
+         }
+         .grinding .__image-block {
+            background: url(../src/img/услуги/shlif.jpg);
+            @include image_position_services()
          }
          .painting{
-            background: url(../src/img/7b3d652b67aa0aec24451e98778ec63e.png), white;
+            background: white;
+         }
+         .painting .__image-block {
+            background: url(../src/img/услуги/03-germetizatsiya-tortsov-03.jpg);
+            @include image_position_services()
          }
          .warm_seam{
-            background: url(../src/img/шов.png), white;
+            background-color: white;
+         }
+         .warm_seam .__image-block{
+            background: url(../src/img/услуги/Germetik-v-dereve.jpg);
+            @include image_position_services()
          }
          .__services_card{
             width: 300px;
             height: 445px;
-            background-repeat: no-repeat;
-            background-position: center top;
-            background-size: contain;
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
             border-radius: 25px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: space-between;
             text-align: center;
             align-items: center;
             .__text_block{
                margin-bottom: 30px;
                padding-bottom: 15px;
                width: 80%;
+               min-height: 160px;
                border:1px solid black;
                border-radius: 15px;
                h3{
@@ -351,7 +368,7 @@ body{
                   linear-gradient(180deg, rgba(255, 255, 255, 0) 31.25%, #FFFFFF 87.5%), 
                   url(./img/Back_Case/case5.jpg)
                   no-repeat;
-      background-size: cover;
+       background-size: cover;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -389,13 +406,14 @@ body{
             display: flex;
             flex-direction: column;
             max-width: 350px;
-            height: 350px;
             .card__header{
                display: flex;
                justify-content: space-around;
                align-items: center;
                img{
                   border-radius: 50%;
+                  width: 5rem;
+                  margin-right: 10px;
                }
             }
             .rating ul{
@@ -495,19 +513,18 @@ body{
       }
     }
     .faq{
-       margin: 0 auto;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       background: linear-gradient(180deg, #FFFFFF 15.62%, #BFC9BD 100%);
-      // transform: translate3d(0px, 30px, 0);
-      // opacity: 0;
       h2{
          padding-top: 10rem;
          color: black;
          font-size: $h2_font-size;
          letter-spacing: $h2_letter_space;
          padding-bottom: 30px;
+         text-align: center;
       }
       ul{
          list-style-type: none;
@@ -648,10 +665,12 @@ body{
    /*  Установаем ширину окна  */
    width: 100%;
    max-width: 80%;
+   max-height: 90vh;
+
    
    /*  Центрируем и задаем z-index */
    position: fixed;
-   top: 50%;
+   top: 27rem;
    left: 50%;
    transform: translate(-50%, -50%);
    z-index: 30; /* Должен быть выше чем у подложки*/
@@ -665,7 +684,9 @@ body{
    transition: 0.3s all;
    img{
       float: left;
-      max-height: 60vh;
+      max-height: 80vh;
+      max-width: 50%;
+      padding-right: 20px;
    }
    .modal__title{
       padding: 5rem 0 0 30rem;
@@ -778,11 +799,15 @@ body{
             }
             .__service_container{
                .__services_card{
-                  background-size: 150px;
-                  width: unset;
+                  width: 100%;
                   height: unset;
+                  .__image-block{
+                     height: 30rem;
+                     margin-bottom: 1rem;
+                     background-position: center;
+                  }
                   .__text_block{
-                     margin-top: 20%;
+                     min-height: unset;
                   }
                }
             }
@@ -967,9 +992,7 @@ body{
            letter-spacing: 4px;
            padding: 2rem 0;
          }
-         .__services .__service_container .__services_card .__text_block{
-            margin-top: 40%;
-         }
+         
       }
       .commercial_block{
          h2{
